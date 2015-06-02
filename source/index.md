@@ -2,19 +2,21 @@
 title: Backoffice Cielo
 
 toc_footers:
-  - <a href='/Checkout-Cielo/'>Integração com Checkout Cielo</a>
-  - <a href='/Checkout-Orientacoes-Gerais/'>Orientações Gerais</a>
-  - <a href='/Checkout-FAQ/'>FAQ</a>
+  - <a href='/Checkout-Cielo/'>Manual Checkout Cielo</a>
+  - <a href='/Checkout-FAQ/'>Perguntas Frequêntes</a>
 
 search: true
 ---
 
 # Backoffice Cielo
 
-Na tela inicial do Checkout Cielo é possivel se logar, se cadastrar ou fazer o login voltado para a Consulta a um
-determinado pedido. Essa tela é acessada via a URL: [https://cieloecommerce.cielo.com.br/backoffice](https://cieloecommerce.cielo.com.br/backoffice)
+Na página principal da Cielo é possível acessar o Backoffice Cielo. Para isso, basta clicar em **Acessar Minha Conta**:
 
-![Backoffice Cielo - página inicial](/images/checkout-cielo-login.png)
+![Acesso Backoffice Cielo](/images/checkout-acesso.png)
+
+Ao clicar em **Acessar Minha Conta**, uma nova tela se abrirá onde será possível se logar, se cadastrar ou fazer o login voltado para a Consulta a um determinado pedido.
+
+![Login Backoffice Cielo](/images/checkout-login.png)
 
 ## Páginas do Backoffice Cielo
 
@@ -24,7 +26,7 @@ O Backoffice é formado por 6 paginas diferentes de administração do Checkout 
 2. [Pedidos](#pedidos) - Nessa pagina fica contida toda a listagem de transações realizadas por um determinado periodo de tempo no Checkout Cielo.
 3. [Produtos](#produtos) - Nessa pagina são listados todos os produtos cadastrados no Checkout Cielo. Tambem é possivel fazer uma busca pelo nome do produto nesta pagina.
 4. [Relatórios](#relatórios) - Nesta pagina é possivel gerar 03 tipos de relatorios: Relatório financeiro, Detalhado de vendas e Listagem de clientes.
-5. [Manuais](#manuais) - Nesta pagina constam os manuais do Checkout Cielo, assim como a pagina de FAQ e de “Duvidas”, onde o lojista pode entrar em contato com a equipe de suporte Checkout Cielo.
+5. [Suporte](#suporte) - Nesta pagina constam os manuais do Checkout Cielo, assim como a pagina de FAQ e de “Duvidas”, onde o lojista pode entrar em contato com a equipe de suporte Checkout Cielo.
 6. [Configurações](#configurações) - Página onde é possivel fazer alterações nas configurações da Loja, dos seus dados cadastrais e Alterar sua Senha.
 
 # DashBoard
@@ -39,7 +41,7 @@ Nessa tela você encontra dois tipos de informações:
 * **Alertas** – Indica se há pedidos a expirar na data presente.
 * **Volume financeiro e transacional** - São gráficos interativos que demonstram em porcentagem (e em valores totais) qual a participação de cada meio de pagamento no total de transações realizadas e o volume total de acordo com o status das transações.
 
-![DashBoard](/images/checkout-cielo-dashboard.png)
+![DashBoard](/images/checkout-dashboard.png)
 
 # Pedidos
 
@@ -47,7 +49,7 @@ Nessa pagina fica contida toda a listagem de transações realizadas por um dete
 
 O resultado da pesquisa é exposta em forma de uma listagem de operações. Essa listagem pode ser exportada como forma de excel.
 
-![Pedidos](/images/checkout-cielo-pedidos.png)
+![Pedidos](/images/checkout-pedidos.png)
 
 # Produtos
 
@@ -57,11 +59,11 @@ No menu Produtos, há também outras duas áreas: **Cadastrar de produtos** e **
 
 ## Listar Produtos Cadastrados
 
-![Produtos cadastrador](/images/checkout-cielo-produtos-cadastrados.png)
+![Produtos cadastrados](/images/checkout-listar-produtos.png)
 
 Clicando no Titulo ou SKU do produto, você será redirecionado a página de informações de Produto, onde todas as caracteristicas do produto são informadas e onde você pode definir o padrão do Botão (caso a sua integração seja com base no Botão Checkout Cielo) a ser usado na venda desse produto.
 
-![Detalhes do produto](/images/checkout-cielo-detalhes-produto.png)
+![Detalhes do produto](/images/checkout-detalhes-produto.png)
 
 ## Cadastrar de Produtos
 
@@ -71,7 +73,7 @@ Nessa pagina é possivel cadastrar seus produtos com base no tipo de produto em 
 * **Digital** – Bems digitais vendidos pela internet. Ex: Software, Jogos , Musicas, etc.
 * **Serviço** – Serviços a serem prestados. Ex: Entrega delivery, projetos e orçamentos.
 
-![Cadastrar produtos](/images/checkout-cielo-cadastrar-produtos.png)
+![Cadastrar produtos](/images/checkout-cadastrar-produtos.png)
 
 <aside class="notice">Material Fisico exige que um tipo de frete seja cadastrado.</aside>
 
@@ -89,7 +91,7 @@ Nesta pagina é possivel gerar 03 tipos de relatorios: Relatório financeiro, De
 
 Esse relatorio apresenta as vendas pagas em um determinado periodo de tempo, sendo separadas por meio de pagamento. Selecionando o periodo e tipo de pagamento, após pressionar “Buscar” o resultado será apresentado.
 
-![Relatório financeiro](/images/checkout-cielo-relatorio-financeiro.png)
+![Relatório financeiro](/images/checkout-relatorio-financeiro.png)
 
 ## Relatório detalhado de vendas.
 
@@ -97,7 +99,7 @@ Esse relatorio informa o valor de cada pedido assim como dados sobre o produto e
 
 <aside class="notice">Pedidos realizados no Modo de teste não são apresentados nesse relatório, mesmo que estejam com o status “PAGO”</aside>
 
-![Relatório detalhado de vendas](/images/checkout-cielo-relatorio-detalhado-de-venda.png)
+![Relatório detalhado de vendas](/images/checkout-relatorio-detalhado-vendas.png)
 
 ## Listagem de clientes
 
@@ -121,13 +123,13 @@ A listagem de clientes gera um arquivo excel contendo os dados dos clientes que 
 
 A lista do valor cobrado pelos serviços oferecidos pela Cielo será apresentada neste relatório. Todos os dados dos planos e custos transacionais serão apresentados aqui:
 
-![Extrato de cobrança](/images/checkout-cielo-relatorio-extrato-cobranca.png)
+![Extrato de cobrança](/images/checkout-extrato-cobranca.png)
 
-# Manuais
+# Suporte
 
-Nesta pagina constam os manuais do Checkout Cielo, assim como a pagina de FAQ e de “Duvidas”, onde o lojista pode entrar em contato com a equipe de suporte Checkout Cielo.
+Nesta aba constam os manuais do Checkout Cielo, assim como a pagina de FAQ e de “Duvidas”, onde o lojista pode entrar em contato com a equipe de suporte Checkout Cielo.
 
-![Dúvidas](/images/checkout-cielo-manuais-duvidas.png)
+![Dúvidas](/images/checkout-suporte.png)
 
 Nessa pagina é possivel entrar em contato a respeito de duvidas Operacionais, tecnicas e Comerciais e ter acesso aos documentos técnicos e de suporte do Checkout Cielo.
 
@@ -143,19 +145,17 @@ Página onde é possivel fazer alterações nas **configurações da Loja**, dos
 
 Nesta pagina é possivel fazer configurações em diferentes mecanismos dentro do Checkout Cielo. Essa área é dividida em 4 partes diferentes: Exibição, Pagamentos, Antifraude, Frete de Correios & serviços.
 
+![Configuração Exibição](/images/checkout-configuracoes-loja.png)
+
 ### Exibição
 
 Aqui é possivel alterar o logo do meio de pagamento disponível em sua loja e a cor de fundo do site via o uso da caixa de opções ou digitando o código relativo a cor escolhida (As cores estão no padrão RGB).
-
-![Configuração Exibição](/images/checkout-cielo-configuracao-exibicao.png)
 
 <aside class="notice">O logo de sua loja será exibido na tela de Checkout centralizado.</aside>
 
 ### Pagamentos
 
 Nesta tela é possivel alterar as configurações dos meios de pagamento disponiveis em sua loja , os definindo como ativos ou não, e configurar a URL de retorno, notificação e Mudança de Status.
-
-![Configuração Pagamentos](/images/checkout-cielo-configuracao-pagamentos.png)
 
 #### Cartões de crédito e Parcelamento
 
@@ -180,7 +180,7 @@ da loja”.
 
 Na tela de pedidos, dentro de cada transação, há a opção de reenvio do POST de mudança de status. Basta clicar nos botões azuis, marcados na imagem abaixo:
 
-![Detalhes do pedido](/images/checkout-cielo-detalhe-pedidos.png)
+![Detalhes do pedido](/images/checkout-detalhe-pedidos.png)
 
 #### Desconto para Boletos e débito online
 
@@ -208,7 +208,7 @@ Aqui é possivel definir a automação dos processos de captura e cancelamento d
 
 <aside class="notice">Se o lojista não tem habilitado o antifraude em seu contrato junto a Cielo ou não enviar no POST a solicitação de analise de fraude, a captura automática não será executada. Caberá ao lojista a captura manual do pedido.</aside>
 
-![Anti fraude](/images/checkout-cielo-anti-fraude.png)
+![Anti fraude](/images/checkout-anti-fraude.png)
 
 #### Frete de Correios & Serviços
 
@@ -216,16 +216,16 @@ Nesta área você configura as opções de frete disponiveis em sua Loja.
 
 Na seção sobre informações sobre frete há uma explicação mais detalhada sobre os tipos de fretes disponiveis no Checkout Cielo. Há tambem na área de fretes de Correiros, uma calculadora de frete para consultas (essa calculadora dá o valor de frete de cada tipo de frete cadastrado para um determinado peso e localidade)
 
-![Frete Correios](/images/checkout-cielo-frete-correios.png)
+![Frete Correios](/images/checkout-frete-correios.png)
 
 #### Dados Cadastrais
 
 Nesta seção, ficam listados os dados da loja cadastrada e do Lojista.
 
-![Dados cadastrais](/images/checkout-cielo-dados-cadastrais.png)
+![Dados cadastrais](/images/checkout-dados-cadastrais.png)
 
 #### Alterar sua Senha
 
 Aqui é possivel alterar a senha de acesso ao Checkout Cielo.
 
-![Alterar senha](/images/checkout-cielo-alterar-senha.png)
+![Alterar senha](/images/checkout-alterar-senha.png)
