@@ -10,13 +10,16 @@ search: true
 
 # Backoffice Cielo
 
-Na página principal da Cielo é possível acessar o Backoffice Cielo. Para isso, basta clicar em **Acessar Minha Conta**:
+Na página principal da Cielo é possível acessar o Backoffice Cielo. Para isso, basta clicar em **[Acessar Minha Conta](https://www.cielo.com.br/minha-conta)**:
 
-![Acesso Backoffice Cielo](/images/checkout-acesso.png)
-
-Ao clicar em **Acessar Minha Conta**, uma nova tela se abrirá onde será possível se logar, se cadastrar ou fazer o login voltado para a Consulta a um determinado pedido.
+Ao clicar em **[Acessar Minha Conta](https://www.cielo.com.br/minha-conta)**, uma nova tela se abrirá onde será possível se logar, se cadastrar ou fazer o login voltado para a Consulta a um determinado pedido.
 
 ![Login Backoffice Cielo](/images/checkout-login.png)
+
+No menu da sua área restrita, clique em “Vendas Online” e em seguida “Checkout Cielo”. Pronto! A partir daí você poderá gerenciar seus pedidos, capturar ou consultar suas vendas, realizar configurações técnicas, mandar e-mail para o suporte e muito
+mais!
+
+![Vendas online](/images/checkout-vendas-online.png)
 
 ## Páginas do Backoffice Cielo
 
