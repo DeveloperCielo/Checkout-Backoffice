@@ -1,6 +1,6 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -11,34 +11,51 @@
     <link href="stylesheets/screen.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="stylesheets/print.css" rel="stylesheet" type="text/css" media="print" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <script src="javascripts/all.js" type="text/javascript"></script>
+    <script src="javascripts/all.js" type="text/javascript"></script>
 
-  </head>
+    <script async src='//www.google-analytics.com/analytics.js'></script>
+    <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
 
-  <body class="index">
+    ga('create', 'UA-8516386-7', {'cookieDomain': 'auto',
+    'alwaysSendReferrer': true});
+
+    ga("set", "transport", "beacon");
+    ga('send', 'pageview');
+    </script>
+</head>
+
+<body class="index">
     <a href="#" id="nav-button">
-      <span>
-        NAV
-        <img src="images/navbar.png" />
-      </span>
+        <span>
+            NAV
+            <img src="images/navbar.png" />
+        </span>
     </a>
     <div class="tocify-wrapper">
-      <img src="images/logo.png" />
+        <img src="images/logo.png" />
         <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
+            <input type="text" class="search" id="input-search" placeholder="Search">
         </div>
         <ul class="search-results"></ul>
-      <div id="toc">
-      </div>
+        <div id="toc">
+        </div>
+        <h2 class="toc-footer-title">Materiais complementares</h2>
         <ul class="toc-footer">
             <li><a href='/Checkout-Cielo/'>Manual Checkout Cielo</a></li>
             <li><a href='/Checkout-FAQ/'>Perguntas Frequêntes</a></li>
         </ul>
+        <div class="links-footer">
+            <ul class="link-list">
+                <li class="cielo"><a href="https://www.cielo.com.br/">Cielo</a></li>
+                <li class="github"><a href="https://github.com/developercielo">Cielo</a></li>
+                <li class="desenvolvedores"><a href="https://www.cielo.com.br/desenvolvedores">Cielo</a></li>
+            </ul>
+        </div>
     </div>
     <div class="page-wrapper">
-      <div class="dark-box"></div>
-      <div class="content">
-        <h1 id="backoffice-cielo">Backoffice Cielo</h1>
+            <div class="content no-dark-box">
+                <h1 id="backoffice-cielo">Backoffice Cielo</h1>
 
 <p>Na página principal da Cielo é possível acessar o Backoffice Cielo. Para isso, basta clicar em <strong><a href="https://www.cielo.com.br/minha-conta">Acessar Minha Conta</a></strong>:</p>
 
@@ -279,9 +296,7 @@ da loja”.</p>
 
 <p><img alt="Alterar senha" src="images/checkout-alterar-senha.png" /></p>
 
-      </div>
-      <div class="dark-box">
-      </div>
-    </div>
-  </body>
-</html>
+            </div>
+        </div>
+    </body>
+    </html>
