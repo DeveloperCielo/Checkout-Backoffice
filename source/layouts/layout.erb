@@ -38,7 +38,34 @@ under the License.
     <script>
     $(function() {
         setupLanguages(<%= language_tabs.map{ |lang| lang.is_a?(Hash) ? lang.keys.first : lang }.to_json %>);
+
+        var _wr = function(type) {
+            var orig = history[type];
+            return function() {
+                var rv = orig.apply(this, arguments);
+                var e = new Event(type);
+
+                e.arguments = arguments;
+                window.dispatchEvent(e);
+                return rv;
+            };
+        };
+
+        history.pushState = _wr('pushState'), history.replaceState = _wr('replaceState');
+
+        window.onhashchange = function() {
+            ga('send', 'event', 'navigation','click', window.location.href);
+        };
+
+        window.addEventListener('replaceState', function(e) {
+            ga('send', 'event', 'navigation','scroll', window.location.href);
+        });
+
+        window.addEventListener('languagechange', function(e) {
+            ga('send', 'event', 'language','change', e.detail);
+        });
     });
+
     </script>
     <% end %>
     <script async src='//www.google-analytics.com/analytics.js'></script>
@@ -98,7 +125,7 @@ under the License.
         <% end %>
         <div class="links-footer">
             <ul class="link-list">
-                <li class="cielo"><a href="https://www.cielo.com.br/">Cielo</a></li>
+                <li class="cielo"><a href="https://www.cielo.com.br/ecommerce">Cielo</a></li>
                 <li class="github"><a href="https://github.com/developercielo">Cielo</a></li>
                 <li class="desenvolvedores"><a href="https://www.cielo.com.br/desenvolvedores">Cielo</a></li>
             </ul>
