@@ -23,7 +23,7 @@ mais!
 
 ## Páginas do Backoffice Cielo
 
-O Backoffice é formado por 6 paginas diferentes de administração do Checkout Cielo. Elas são:
+O Backoffice do Checkout Cielo é formado por 6 paginas com opções diferentes de configuração. Elas são:
 
 1. [DashBoard](#dashboard) - Pagina inicial onde são apresentadas informações sobre a sua conta e sobre o volume e tipo de transações que sua loja vem realizando vio Checkout Cielo.
 2. [Pedidos](#pedidos) - Nessa pagina fica contida toda a listagem de transações realizadas por um determinado periodo de tempo no Checkout Cielo.
@@ -75,6 +75,14 @@ Nessa pagina é possivel cadastrar seus produtos com base no tipo de produto em 
 * **Material Fisico** – Produtos Fisicos que necessitam ser enviados pelos lojistas. Ex: Roupas, Brinquedos, etc.
 * **Digital** – Bems digitais vendidos pela internet. Ex: Software, Jogos , Musicas, etc.
 * **Serviço** – Serviços a serem prestados. Ex: Entrega delivery, projetos e orçamentos.
+
+## Uso do Botão para Cadastrar Produtos
+
+Integração via Botão é um método de compra usada sempre que não houver um “carrinho de compras” em sua loja ou quando se deseja associar uma compra rápida direta a um produto, como uma promoção numa homepage pulando a etapa do carrinho.
+
+A integração via botão também pode ser usada para enviar um e-mail marketing, ou uma cobrança via e-mail, ou seja, adicionando o botão (HTML) referente ao produto/serviço a ser comprado/pago. Ou sempre que desejar disponibilizar uma venda rápida.
+
+Para utilizar este recurso, é necessário cadastrar o produto que deseja vender, suas informações, e depois simplesmente copiar o código fonte gerado para este botão. A inclusão dos produtos é feita dentro do Backoffice, no menu de Produtos/Cadastrar Produto.
 
 ![Cadastrar produtos](/images/checkout-cadastrar-produtos.png)
 
