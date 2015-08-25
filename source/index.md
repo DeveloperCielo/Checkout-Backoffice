@@ -148,27 +148,23 @@ Nessa pagina é possivel entrar em contato a respeito de duvidas Operacionais, t
 * **Tutorial do Lojista** – Principal fonte de informação sobre a utilização do Checkout Cielo do ponto de vista do Lojista
 * **FAQ** – Perguntas mais comuns a respeito do Checkout Cielo. Contem informações sobre questões Comerciais, Técnicas, Operacionais e sobre o Modo de teste.
 
-# Configurações
-
-Página onde é possivel fazer alterações nas **configurações da Loja**, dos seus **dados cadastrais** e **Alterar sua Senha**.
-
-## Configurações da Loja
+# Configurações da Loja
 
 Nesta pagina é possivel fazer configurações em diferentes mecanismos dentro do Checkout Cielo. Essa área é dividida em 4 partes diferentes: Exibição, Pagamentos, Antifraude, Frete de Correios & serviços.
 
 ![Configuração Exibição](/images/checkout-configuracoes-loja.png)
 
-### Exibição
+## Exibição
 
 Aqui é possivel alterar o logo do meio de pagamento disponível em sua loja e a cor de fundo do site via o uso da caixa de opções ou digitando o código relativo a cor escolhida (As cores estão no padrão RGB).
 
 <aside class="notice">O logo de sua loja será exibido na tela de Checkout centralizado.</aside>
 
-### Pagamentos
+## Pagamentos
 
 Nesta tela é possivel alterar as configurações dos meios de pagamento disponiveis em sua loja , os definindo como ativos ou não, e configurar a URL de retorno, notificação e Mudança de Status.
 
-#### Cartões de crédito e Parcelamento
+### Cartões de crédito e Parcelamento
 
 Basta marcar a caixa de seleção do cartão que deseja disponibilizar no momento do pagamento. Para desabilita-lo, basta desmarcar a caixa de seleção O parcelamento é definido por bandeira de cartão. O numero de parcelas maximas disponibilizadas para cada cartão passa a ser definida pelo Lojista. O Checkout Cielo permite parcelamento até 12 vezes sem juros.
 
@@ -180,7 +176,7 @@ Há a opção de definir um valor minimo de parcelamento. O valor definido faz c
 
 <aside class="warning">O cartão American Express tem limite de parcelamento em 3 vezes por padrão. Essa configuração é standart da bandeira AMEX, logo , não é possivel aumentar o numero de parcelas alem deste limite.</aside>
 
-#### URLs principais do Checkout Cielo
+### URLs principais do Checkout Cielo
 
 As URL’s devem ser cadastradas pelo próprio lojista no seu Backoffice, na aba “configurações / Configurações
 da loja”.
@@ -193,14 +189,14 @@ Na tela de pedidos, dentro de cada transação, há a opção de reenvio do POST
 
 ![Detalhes do pedido](/images/checkout-detalhe-pedidos.png)
 
-#### Desconto para Boletos e débito online
+### Desconto para Boletos e débito online
 
 É possivel realizar oferecer descontos nos meios de pagamento boleto e débito online. Esse desconto pode ser definido de duas maneiras.
 
 * **Via Backoffice:** Basta selecionar o valor em (%) que o meio de pagamento virá a oferecer.
 * **Via POST:** é possivel enviar o no POST do carrinho um parametro contendo o desconto (%) que o meio de pagamento virá a oferecer.
 
-#### Valor Minimo de boleto
+### Valor Minimo de boleto
 
 É possivel definir um valor minimo para que o boleto seja apresentado. Compras em valor inferior ao definido não tem o boleto disponibilizado na tela de checkout.
 
@@ -213,7 +209,7 @@ Para evitar a situação descrita no alerta acima, sugerimos:
 
 <aside class="warning">O valor minimo do boleto não funciona em caso de descontos definidos pelo lojista. Caso o lojista defina valor minimo de boleto de R$100,00 e um desconto de 10%, será gerado um boleto de R$90,00 (inferior ao minimo)</aside>
 
-#### Antifraude
+### Antifraude
 
 Aqui é possivel definir a automação dos processos de captura e cancelamento de pedidos com base no resultado da analise de anti-fraude.
 
@@ -221,7 +217,7 @@ Aqui é possivel definir a automação dos processos de captura e cancelamento d
 
 ![Anti fraude](/images/checkout-anti-fraude.png)
 
-#### Frete de Correios & Serviços
+### Frete de Correios & Serviços
 
 Nesta área você configura as opções de frete disponiveis em sua Loja.
 
@@ -229,14 +225,185 @@ Na seção sobre informações sobre frete há uma explicação mais detalhada s
 
 ![Frete Correios](/images/checkout-frete-correios.png)
 
-#### Dados Cadastrais
+### Dados Cadastrais
 
 Nesta seção, ficam listados os dados da loja cadastrada e do Lojista.
 
 ![Dados cadastrais](/images/checkout-dados-cadastrais.png)
 
-#### Alterar sua Senha
+### Alterar sua Senha
 
 Aqui é possivel alterar a senha de acesso ao Checkout Cielo.
 
 ![Alterar senha](/images/checkout-alterar-senha.png)
+
+# Configurações de Pagamento
+
+## Cartão de Crédito
+
+O Checkout Cielo aceita as principais bandeiras de crédito do Brasil e do mundo. São elas: Visa, MasterCard, American Express (Amex), Elo, Diners, Discover, JCB e Aura.
+
+### Recebendo uma Venda de Cartão de Crédito
+
+A partir da criação de uma transação, ela pode assumir diversos status. As transições de status podem ser realizadas através da troca de mensagens entre a loja e a Cielo, ou de forma automática, por exemplo, quando o prazo para a captura de transação autorizada expirar.
+
+Pedidos por meio de cartão de crédito serão incluídos no [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/) como **“AUTORIZADO”** ou **“NÃO AUTORIZADO”**, dependendo do resultado da autorização na Cielo. Caso haja algum problema no processamento deste pedido (consumidor fechou a tela, por exemplo), ele constará como **“NÃO FINALIZADO”**.
+
+### Análise de Fraude
+
+Pedidos **“AUTORIZADOS”** serão enviados online, ou seja, no ato da venda, para análise da ferramenta de antifraude, quando  este desenvolvimento estiver devidamente padronizado na integração. O resultado desta análise será traduzido no campo **“Indicação AF”** no Relatório de Pedido, para cada pedido.
+
+Esta análise indicará um **“BAIXO RISCO”** ou “ALTO RISCO” para a venda em questão. Esta sugestão é o que deve guiar a decisão de se confirmar  ou cancelar a venda. A analise será apresentada no “Detalhes do Pedido”, como abaixo:
+
+![Análise de risco](/images/checkout-cielo-analise-risco.png)
+
+## Cartão de débito
+
+O Checkout Cielo aceita as principais bandeiras de cartão de débito do mercado: Visa e MasterCard. As transações de cartão de débito possuem como participantes os bancos emissores, que por sua vez usam dos mesmos recursos para transações online (token, cartão de senhas e etc) para o processo de autenticação. Consulte a relação de emissores participantes no Suporte Cielo e-Commerce.
+
+* **E-mail**: [cieloecommerce@cielo.com.br](mailto:cieloecommerce@cielo.com.br)
+* **Telefones**:
+    * **Capitais**: (sem DDD) 4002.9700
+    * **Demais Localidades**: 0800.570.1700
+    * **Do exterior**: +55 (11) 2860.1348
+
+A autenticação da transação garantirá uma segurança extra ao lojista contra contestações dos consumidores (chargeback). O produto débito obrigatoriamente exige uma transação autenticada, caso contrário, a transação não é autorizada. A autenticação é obrigatória para transações de débito e opcional para o crédito.
+
+### Passo a passo da transação de cartão de débito:
+
+1. Cliente acessa o internet banking
+2. Digita a senha do cartão
+3. Banco confirma a senha
+4. Transação realizada
+
+## Boleto
+
+Todo boleto gerado (emitido) aparece com o status de “PENDENTE” no Relatório de Pedidos. Sua troca de status vai depender de ações manuais do proprio lojista. Para isso, acesse o [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/) (incluir link do manual) na seção Pedidos
+
+### Possiveis Status do Boleto
+
+* **PENDENTE** – boleto emitido pelo processo de transação. Status continua até alteração manual pelo lojista.
+* **PAGO** – Status usado quando o botão "Conciliar” é ativado pelo lojista. Esse status pode ser revertido para pendente utiliando o Botão “Desfazer conciliação”.
+* **EXPIRADO** – Status ativo após 10 dias da criação do boleto, caso esse não tenha sito conciliado nesse periodo. Boletos com status “EXPIRADO” podem ser conciliados.
+
+### Conciliando um Boleto
+
+Cabe ao lojista através de uma Conciliação Manual com seu extrato bancário, confirmar o pagamento do mesmo.
+
+![Conciliando um boleto](/images/checkout-cielo-conciliar-boleto.png)
+
+Para realizar a Conciliação você deve:
+
+1. Acessar o relatório de pedidos no [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/);
+2. Filtrar os pedidos por Meio de Pagamento “Boleto” e status “PENDENTE” e identificar o boleto em questão pelo Valor;
+3. Clicar no sinal de + no final da linha para acessar a página de “Detalhes”;
+4. Clicar no botão de “ Confirmar Pagamento ” e informar a data de pagamento, para seu futuro controle;
+
+O pedido passa para status **PAGO**.
+
+O Comprador também verá o pedido como **PAGO** no “Backoffice do Comprador”
+
+Desfazendo a conciliação (pagamento) de um Boleto. Caso a conciliação tenha sido feito errada, basta:
+
+1. Encontrar o Pedido;
+2. Entrar no seu detalhe e clicar no botão “Desfazer Pagamento”;
+3. O Pedido voltará para o Status de “PENDENTE”.
+
+### Boletos Expirados
+
+Se o boleto não for conciliado dentro de um prazo de 10 dias após seu vencimento, seu Status será alterado para **“EXPIRADO”**, para um melhor controle dos boletos vencidos. Boletos EXPIRADOS podem ser conciliados.
+
+<aside class="notice">Validade do Boleto – Caso o boleto expire em um dia não útil, como Sábado, ele será valido até o próximo dia útil.</aside>
+
+![Boleto](/images/checkout-cielo-boleto.png)
+
+## Débito Online
+
+Pedidos vendidos por meio de Débito online serão incluídos no [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/) como PENDENTE, PAGO, NÃO AUTORIZADO ou NÃO FINALIZADO, dependendo do resultado da autorização junto ao Banco.
+
+* **Pendente** - Corresponde quando o comprador ao finalizar o pedido e não obtem resposta por parte do Banco, ou seja, não conseguir nem carregar a página do Banco para inserir os dados para o Débito.
+* **Pago** - Corresponde quando o comprador conseguir realizar o pagamento do débito com sucesso.
+* **Não Autorizado** - Apresentado para o Lojista quando o comprador tentar realizar uma transação via débito e não ter saldo para a transação.
+* **Não Finalizado** - Apresentado para o Lojista caso o comprador tenha algum problema para finalizar o pagamento do meio Débito, seja fechando a janela do banco ou simplesmente nem chegando à tela do banco.
+
+## Diferença entre estorno e cancelamento
+
+* **Cancelamento:** é feito no mesmo dia da captura, devolvendo o limite ao cartão do comprador em até 72h conforme regras do banco emissor do cartão. Não é apresentado na fatura do comprador;
+* **Estorno:** a partir do dia seguinte da captura, o valor é “devolvido” na fatura do comprador em até 300 dias. É apresentado na fatura do comprador.
+
+## Captura/Cancelamento Automático
+
+<aside class="notice">Veja a diferença entre cancelamento e estorno em <a href="#diferença-entre-estorno-e-cancelamento">Diferença entre estorno e cancelamento</a></aside>
+
+### Captura automática
+
+As vendas **“AUTORIZADAS”**, e com **“BAIXO RISCO”** na ferramenta de  antifraude poderão ser **CAPTURADAS** automaticamente pelo sistema. Para isso é preciso configurar no o [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/). Após essa configuração, o status apresentado será **“PAGO”**. Esta venda será então confirmada (capturada) na Cielo.
+
+![Cancelamento e captura automático](/images/checkout-cielo-cancelamento-captura-automatico.png)
+
+### Cancelamento Automático
+
+As vendas “AUTORIZADAS”, e com “ALTO RISCO”  na ferramenta de  antifraude poderão ser CANCELADAS automaticamente pelo sistema. Para isso é preciso configurar no o [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/). Após essa configuração, o status apresentado será “CANCELADO”. Esta venda será então cancelada (desfeita) na Cielo.
+
+![Cancelamento e captura automático](/images/checkout-cielo-cancelamento-captura-automatico.png)
+
+<aside class="warning">Atenção! Você tem a opção de escolher a melhor integração para o seu negócio, a captura/cancelamento manual ou automático é feito diretamente pelo seu Backoffice.</aside>
+
+![Cancelamento e captura automáticos](/images/checkout-cielo-anti-fraude-cancelamento-captura.png)
+
+## Captura/Cancelamento manual
+
+<aside class="notice">Veja a diferença entre cancelamento e estorno em <a href="#diferença-entre-estorno-e-cancelamento">Diferença entre estorno e cancelamento</a></aside>
+
+As vendas **“AUTORIZADAS”** aguardam uma decisão de confirmação ou cancelamento. E esta decisão deve vir em conformidade com a análise de fraude, caso esta funcionalidade esteja devidamente parametrizada na integração.
+
+A confirmação da venda deve ser feita pelo botão **CAPTURAR**, na aba  **“Pedidos”**, no [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/). Após a confirmação, o status mudará para **“PAGO”**. Esta venda será então confirmada (capturada) na Cielo.
+
+Já o  cancelamento deve ser feito pelo botão **CANCELAR** na mesma seção No [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/). Após o cancelamento, o status mudará para **“CANCELADO”**. Esta venda será então cancelada (desfeita) na Cielo.
+
+<aside class="warning">Atenção! Você tem até 5 dias pra confirmar a venda! Caso isso não seja feito ela não será mais válida na Cielo, e o limite reservado para sua loja/venda será liberado. Este é um procedimento padrão para todas as lojas.</aside>
+
+<aside class="warning">Quando o prazo de confirmação da venda autorizada expira, os pedidos passarão automaticamente para o status “EXPIRADO”. Isso acontecerá no sexto dia após a data de autorização (data da venda)</aside>
+
+## Estorno de Venda
+
+Caso a venda já tenha sido confirmada (status PAGO) ela pode ser ainda, futuramente, estornada. Para isso, basta clicar no botão no Detalhe do Pedido.
+
+### Vendas de Cartões de Crédito Expiradas
+
+Quando o prazo de confirmação da venda autorizada expira, os pedidos passarão automaticamente para o status “EXPIRADO”. Isso acontecerá no sexto dia após a data de autorização (data da venda)
+
+## Chargeback
+
+O consumidor (comprador) pode por algum motivo cancelar a compra diretamente com o banco emissor do cartão de crédito. Caso isso ocorra  o lojista receberá da Cielo um aviso de Chargeback de “Não Reconhecimento de compra” ou caso tenha havido uma compra com cartão fraudado, você recebera um aviso de Chargeback por “Fraude”.
+
+![Chargeback](/images/checkout-cielo-chargeback.png)
+
+Essa comunicação não é feita via o [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/), mas sim pelo extrato de venda da Cielo, destacada como um ajuste financeiro. O extrato de vendas está disponivel no site da Cielo [www.cielo.com.br na aba “Acessar Minha conta”](https://www.cielo.com.br/minha-conta).
+
+![Acessar minha conta](/images/acessar-minha-conta.png)
+
+Após esse recebimento, no próprio site da Cielo  é possivel acessar o [Backoffice Cielo Checkout](http://developercielo.github.io/Checkout-Backoffice/) e sinalizar o pedido como tendo recebido um Chargeback, pra seu melhor controle. Basta entrar no Detalhe do Pedido e clicar no botão “ChargeBack”, e seu status passará a ser “CHARGEBACK”.
+
+## Frete
+
+O Checkout Cielo suporta diferentes tipos de frete, que podem ser utilizados de maneira diferenciada de acordo com as opções oferecidas em sua loja. As opções disponíveis são:
+
+* Correios
+* Frete Fixo
+* Frete Grátis
+* Sem Frete
+
+A maneira e o tipo de frete que ficará ativo em sua loja é configurado no Backoffice do Checkout Cielo. Devido ao aspecto mais técnico, sugerimos que as configurações de frete sejam feitas pelo desenvolvedor. Diferentes métodos de cálculo de frete:
+
+### Cálculo de frete próprio
+
+É possível selecionar 1 ou mais opções de frete. Elas serão apresentadas ao consumidor de acordo com a sua escolha entre as opções disponíveis. O valor selecionado pelo consumidor será adicionado ao valor total da compra.
+
+### Contrato próprio com os Correios
+
+* O Checkout Cielo usará este número de contrato para fazer o cálculo de frete, utilizando assim a tabela de frete que você possui acordada junto aos Correios. Desse modo, o checkout apresentará todas as opções de frete dos Correios (Sedex, Sedex 10, Sedex. Hoje e PAC, entre outras) para o consumidor escolher, de acordo com o CEP de destino digitado. O valor selecionado pelo Consumidor será adicionado ao valor total da compra.
+* Usar o cálculo de frete dos Correios do Checkout Cielo. O Checkout Cielo apresentará todas as opções de frete dos Correios (Sedex, Sedex 10, Sedex Hoje e PAC, entre outras) para o consumidor escolher, de acordo com o CEP de destino digitado. O valor selecionado pelo consumidor será adicionado ao valor total da compra.
+* Seleção do Frete no carrinho e não no Checkout Cielo. O Checkout Cielo apresentará somente a tela de escolha do meio de pagamento para o consumidor. O valor do frete já estará embutido no valor final
+
+<aside class="notice">O consumidor não poderá alterar o endereço de entrega na tela do Checkout Cielo</aside>
