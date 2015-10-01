@@ -357,7 +357,7 @@ Esta análise indicará um **“BAIXO RISCO”** ou “ALTO RISCO” para a 
 
 ![Análise de risco](/images/checkout-cielo-analise-risco.png)
 
-### Recorrência de Crédito no Checkout Cielo
+## Recorrência de Crédito no Checkout Cielo
 
 A Recorrência é um processo de agendamento automático de transações de crédito, ou seja, é uma transação que se repetirá automaticamente, sem a necessidade do comprador acessar a tela transacional, de acordo com as regras definidas no momento do agendamento.
 
