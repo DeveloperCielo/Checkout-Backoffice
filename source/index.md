@@ -256,7 +256,7 @@ Campo valor mínimo de analise AF:
 
 ![Valor mínimo anti fraude](/images/checkout-anti-fraude-valor-minimo.png)
 
-Tabela de status do Antifraude
+#### Tabela de status do Antifraude
 
 |Status Antifraude|Substatus|Descrição|
 |-----------------|---------|---------|
@@ -269,6 +269,10 @@ Tabela de status do Antifraude
 |N/A|Não aplicável|Meio de pagamento não analisável como cartões de débito, boleto e débito online|
 |N/A|Transação de recorrência|Transação de crédito seja posterior a transação de agendamento|
 |N/A|Transação negada|Venda a crédito foi negada|
+
+Você pode visualizar o status do antifraude acessando o detalhe da compra, na aba Pedidos e clicando no (+)
+
+![Status Antifraude](/images/checkout-status-antifraude.png)
 
 ### Frete de Correios & Serviços
 
