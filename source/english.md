@@ -301,6 +301,20 @@ Field of minimum amount for AF analysis:
 
 ![Minimum amount or anti fraud](/images/checkout-anti-fraude-valor-minimo.png)
 
+Anti fraud status table 
+
+|Antifraud Status|Substatus|Description|
+|----------------|---------|-----------|
+|Low risk|Low risk|Low risk of fraudulent transaction|
+|Medium Risk|Medium risk of fraudulent transaction|
+|Unfinnished|Unfinnished|Could not complete this query|
+|N/A|Authenticated|Transactions authenticated by the bank|
+|N/A|AF Not hired|Antifraud not enabled on merchant's plan|
+|N/A|AF Exempt|Antifraud exempt in the contract or below the minimum antifraud value parameterized in backoffice merchant|
+|N/A|Not applicable|Unanalysable payment method as debit cards, boleto and online debit|
+|N/A|Recurrence Transaction|Credit transaction is later than the scheduled transaction|
+|N/A|Transaction Denied|Sale to credit was denied|
+
 ### FREIGHT & POSTAL SERVICES
 
 In this area you configure shipping options available in your store. In the Section [Shipping information](#informações-sobre-frete) for more detailed explanation 
