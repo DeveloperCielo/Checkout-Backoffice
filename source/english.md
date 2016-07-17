@@ -301,7 +301,7 @@ Field of minimum amount for AF analysis:
 
 ![Minimum amount or anti fraud](/images/checkout-anti-fraude-valor-minimo.png)
 
-Anti fraud status table 
+#### Anti fraud status table 
 
 |Antifraud Status|Substatus|Description|
 |----------------|---------|-----------|
@@ -314,6 +314,10 @@ Anti fraud status table
 |N/A|Not applicable|Unanalysable payment method as debit cards, boleto and online debit|
 |N/A|Recurrence Transaction|Credit transaction is later than the scheduled transaction|
 |N/A|Transaction Denied|Sale to credit was denied|
+
+You can see the antifraud status accessing purchasing detail at Order tab and clicking on (+)
+
+![Status Antifraude](/images/checkout-status-antifraude.png)
 
 ### FREIGHT & POSTAL SERVICES
 
