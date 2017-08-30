@@ -259,7 +259,7 @@ Campo valor mínimo de analise AF:
 #### Tabela de status do Antifraude
 
 |Status Antifraude|Substatus|Descrição|
-|-----------------|---------|---------|
+|---|---|---|
 |Baixo Risco|Baixo Risco|Baixo risco de ser uma transação fraudulenta|
 |Médio Risco|Médio Risco|Médio risco de ser uma transação fraudulenta|
 |Não finalizado|Não finalizado|Não foi possível finalizar a consulta|
